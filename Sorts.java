@@ -12,10 +12,6 @@ public class Sorts{
       sorted = true;
       iteration += 1;
       for (int i = 0; i < data.length - iteration; i++) {
-        // for (int j = 0; j < data.length; j++) {
-        //   System.out.print(data[j] + " ");
-        // }
-        System.out.println(Arrays.toString(data));
         if (data[i]>data[i+1]) {
           sorted = false;
           int temp = data[i];
@@ -23,7 +19,6 @@ public class Sorts{
           data[i+1] = temp;
         }
       }
-      System.out.println();
     }
   }
 }
