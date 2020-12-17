@@ -21,4 +21,19 @@ public class Sorts{
       }
     }
   }
+
+  public static void selectionSort(int[] data) {
+    for (int i = 0; i < data.length-1; i++) {
+      int mindex = i;
+      for (int j = i+1; j < data.length; j++) {
+        if (data[j]<data[mindex]) mindex=j;
+      }
+      int temp = data[mindex];
+      data[mindex] = data[i];
+      data[i] = temp;
+      System.out.println(Arrays.toString(data));
+    }
+  }
+
+  
 }
