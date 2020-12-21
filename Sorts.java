@@ -31,9 +31,25 @@ public class Sorts{
       int temp = data[mindex];
       data[mindex] = data[i];
       data[i] = temp;
-      System.out.println(Arrays.toString(data));
     }
   }
 
-  
+  public static void insertionSort(int[] data) {
+    for (int i = 1; i < data.length; i++) {
+      if (data[i]<data[i-1]) {
+        int temp = data[i];
+        boolean found = false;
+        for (int j = i-1; j >= 0; j--) {
+          if (temp >= data[j]) {
+            data[j+1] = temp;
+            found = true;
+            break;
+          } else {
+            data[j+1] = data[j];
+          }
+        }
+        if (!found) data[0]=temp;
+      }
+    }
+  }
 }
